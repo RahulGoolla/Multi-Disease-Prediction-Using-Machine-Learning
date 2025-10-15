@@ -1,0 +1,38 @@
+/* static/style.css */
+
+body.auth-bg {
+  background: url("../static/login-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Background for dashboard */
+body.dashboard-bg {
+  background: url("../static/dashboard-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Shared styles */
+.form-container {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}

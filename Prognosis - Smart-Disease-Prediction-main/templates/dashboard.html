@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Prognosis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      background: url("{{ url_for('static', filename='dashboard-bg.jpg') }}") no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      color: white;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .disease-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .disease-link:hover {
+      color: #0f0;
+    }
+    .card {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: none;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    .card-title {
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark px-5">
+    <a class="navbar-brand fw-bold" href="#">Prognosis Dashboard</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link disease-link" href="/heart">Heart Disease</a></li>
+        <li class="nav-item"><a class="nav-link disease-link" href="/diabetes">Diabetes</a></li>
+        <li class="nav-item"><a class="nav-link disease-link" href="/parkinsons">Parkinsons</a></li>
+        <li class="nav-item"><a class="nav-link disease-link" href="/kidney">Kidney Disease</a></li>
+        <li class="nav-item"><a class="nav-link disease-link" href="/liver">Liver Disease</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5 text-center">
+    <h2 class="mb-4">Select a Disease to Predict</h2>
+    <p class="lead">Click any disease in the menu bar to continue with prediction.</p>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+      <!-- Heart Disease -->
+      <div class="col">
+        <div class="card p-3">
+          <h5 class="card-title">Heart Disease</h5>
+          <p><strong>Symptoms:</strong> Chest pain, shortness of breath, fatigue, irregular heartbeat.</p>
+          <p><strong>Prevention:</strong> Avoid smoking, exercise regularly, eat a heart-healthy diet, manage stress.</p>
+        </div>
+      </div>
+
+      <!-- Diabetes -->
+      <div class="col">
+        <div class="card p-3">
+          <h5 class="card-title">Diabetes</h5>
+          <p><strong>Symptoms:</strong> Frequent urination, excessive thirst, fatigue, blurry vision.</p>
+          <p><strong>Prevention:</strong> Maintain a balanced diet, exercise, manage body weight, regular checkups.</p>
+        </div>
+      </div>
+
+      <!-- Parkinson's -->
+      <div class="col">
+        <div class="card p-3">
+          <h5 class="card-title">Parkinson’s Disease</h5>
+          <p><strong>Symptoms:</strong> Tremors, slow movement, stiff muscles, balance issues.</p>
+          <p><strong>Prevention:</strong> Regular physical activity, healthy diet, avoiding toxins, managing head trauma risks.</p>
+        </div>
+      </div>
+
+      <!-- Kidney Disease -->
+      <div class="col">
+        <div class="card p-3">
+          <h5 class="card-title">Kidney Disease</h5>
+          <p><strong>Symptoms:</strong> Swelling, fatigue, changes in urination, nausea.</p>
+          <p><strong>Prevention:</strong> Stay hydrated, control blood sugar and blood pressure, limit salt and alcohol.</p>
+        </div>
+      </div>
+
+      <!-- Liver Disease -->
+      <div class="col">
+        <div class="card p-3">
+          <h5 class="card-title">Liver Disease</h5>
+          <p><strong>Symptoms:</strong> Jaundice, abdominal pain, fatigue, swelling in legs.</p>
+          <p><strong>Prevention:</strong> Avoid alcohol, get vaccinated (Hepatitis), avoid toxins, healthy diet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
